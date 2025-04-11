@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - RideRent</title>
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="./animations.css">
+</head>
+<body>
+  <!-- Header/Navbar -->
+  <header class="navbar">
+    <div class="container">
+      <div class="navbar-content">
+        <a href="dashboard.html" class="navbar-logo">
+          <i class="fas fa-car"></i>
+          <span>RideRent</span>
+        </a>
+
+        <button class="mobile-menu-toggle" aria-label="Toggle menu">
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <nav class="navbar-nav">
+          <a href="#home" class="nav-link">Home</a>
+          <a href="#about" class="nav-link">About</a>
+          <a href="#gallery" class="nav-link">Gallery</a>
+          <a href="#vehicles" class="nav-link">Vehicles</a>
+          <a href="#rented" class="nav-link">Rented</a>
+          <a href="#testimonials" class="nav-link">Testimonials</a>
+          <a href="#reviews" class="nav-link">Reviews</a>
+          <a href="#contact" class="nav-link">Contact</a>
+          <!-- <div class="user-dropdown">
+            <button class="user-dropdown-toggle">
+              <i class="fas fa-user"></i>
+            </button>
+            <div class="user-dropdown-menu">
+              <a href="#" class="dropdown-item logout-btn">
+                <i class="fas fa-sign-out-alt"></i>
+                Logout
+              </a>
+            </div>
+          </div> -->
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+      <div class="hero-overlay"></div>
+      <div class="hero-background"></div>
+      <div class="container">
+        <div class="hero-content">
+          <h1 class="hero-title">Drive Your Dreams <span>Today</span></h1>
+          <p class="hero-description">
+            Experience the thrill of driving premium cars and motorcycles. 
+            Rent or buy your dream vehicle with our hassle-free service.
+          </p>
+          <div class="hero-buttons">
+            <a href="#vehicles" class="btn btn-primary">Browse Vehicles</a>
+            <a href="#contact" class="btn btn-outline">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">About RideRent</h2>
+          <p class="section-description">
+            Your premier destination for car and motorcycle rentals and purchases.
+          </p>
+        </div>
+
+        <div class="about-content">
+          <div class="about-image">
+            <img src="home img.jpg" alt="About RideRent">
+          </div>
+
+          <div class="about-text">
+            <h3 class="about-subtitle">Our Story</h3>
+            <p>
+              Founded in 2010, RideRent has grown from a small local business to one of the leading vehicle rental services in the country. Our mission is to provide exceptional vehicles and service at competitive prices.
+            </p>
+            <p>
+              With over a decade of experience, we understand what our customers need and continuously strive to exceed their expectations. Whether you're looking for a luxury car for a special occasion or a reliable motorcycle for daily commuting, we have the perfect vehicle for you.
+            </p>
+
+            <div class="features-grid">
+              <div class="feature-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Wide selection of premium vehicles</span>
+              </div>
+              <div class="feature-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Flexible rental periods</span>
+              </div>
+              <div class="feature-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Competitive pricing</span>
+              </div>
+              <div class="feature-item">
+                <i class="fas fa-check-circle"></i>
+                <span>24/7 customer support</span>
+              </div>
+              <div class="feature-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Free delivery within city limits</span>
+              </div>
+              <div class="feature-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Full insurance coverage</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Our Gallery</h2>
+          <p class="section-description">
+            Explore our collection of premium cars and motorcycles available for rent and purchase.
+          </p>
+        </div>
+
+        <div class="gallery-tabs">
+          <div class="gallery-tab-list">
+            <button class="gallery-tab active" data-category="all">All</button>
+            <button class="gallery-tab" data-category="cars">Cars</button>
+            <button class="gallery-tab" data-category="motorcycles">Motorcycles</button>
+            <button class="gallery-tab" data-category="luxury">Luxury</button>
+          </div>
+
+          <div class="gallery-content active" id="gallery-all">
+            <div class="gallery-grid">
+              <div class="gallery-item" data-category="cars">
+                <img src="sedan.jpg" alt="Luxury Sedan">
+              </div>
+              <div class="gallery-item" data-category="cars">
+                <img src="suv.jpg" alt="SUV">
+              </div>
+              <div class="gallery-item" data-category="motorcycles">
+                <img src="sports motorcycle .jpg" alt="Sport Motorcycle">
+              </div>
+              <div class="gallery-item" data-category="luxury">
+                <img src="sports car.jpg" alt="Luxury Sports Car">
+              </div>
+              <div class="gallery-item" data-category="cars">
+                <img src="convert.jpg" alt="Convertible">
+              </div>
+              <div class="gallery-item" data-category="motorcycles">
+                <img src="cruiser.jpg" alt="Cruiser Motorcycle">
+              </div>
+              <div class="gallery-item" data-category="luxury">
+                <img src="luxury suv.jpg" alt="Luxury SUV">
+              </div>
+              <div class="gallery-item" data-category="cars">
+                <img src="electric car.jpg" alt="Electric Car">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Vehicles Section -->
+    <section id="vehicles" class="vehicles-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Available Vehicles</h2>
+          <p class="section-description">
+            Browse our selection of premium vehicles available for rent or purchase.
+          </p>
+        </div>
+
+        <div class="vehicles-tabs">
+          <div class="vehicles-tab-list">
+            <button class="vehicles-tab active" data-type="cars">
+              <i class="fas fa-car"></i> Cars
+            </button>
+            <button class="vehicles-tab" data-type="motorcycles">
+              <i class="fas fa-motorcycle"></i> Motorcycles
+            </button>
+          </div>
+
+          <div class="vehicles-content active" id="vehicles-cars">
+            <div class="vehicles-grid">
+              <!-- Car 1 -->
+              <div class="vehicle-card" data-id="1">
+                <div class="vehicle-image">
+                  <img src="tesla model 5.jpg" alt="Tesla Model S">
+                </div>
+                <div class="vehicle-header">
+                  <h3 class="vehicle-title">Tesla Model S</h3>
+                  <p class="vehicle-type">Electric Sedan</p>
+                </div>
+                <div class="vehicle-content">
+                  <div class="vehicle-features">
+                    <div class="vehicle-feature">
+                      <i class="fas fa-users"></i>
+                      <span>5 Seats</span>
+                    </div>
+                    <div class="vehicle-feature">
+                      <i class="fas fa-tachometer-alt"></i>
+                      <span>Electric</span>
+                    </div>
+                    <div class="vehicle-feature">
+                      <i class="fas fa-gas-pump"></i>
+                      <span>Electric</span>
+                    </div>
+                    <div class="vehicle-feature">
+                      <i class="fas fa-car"></i>
+                      <span>Automatic</span>
+                    </div>
+                  </div>
+                  <div class="vehicle-price">
+                    <p>$150<span>/day</span></p>
+                  </div>
+                </div>
+                <div class="vehicle-footer">
+                  <button class="btn btn-primary btn-full rent-btn" data-id="1">Rent Now</button>
+                </div>
+              </div>
+
+              <!-- Car 2 -->
+              <div class="vehicle-card" data-id="2">
+                <div class="vehicle-image">
+                  <img src="bmw x5.jpg" alt="BMW X5">
+                </div>
+                <div class="vehicle-header">
+                  <h3 class="vehicle-title">BMW X5</h3>
+                  <p class="vehicle-type">Luxury SUV</p>
+                </div>
+                <div class="vehicle-content">
+                  <div class="vehicle-features">
+                    <div class="vehicle-feature">
+                      <i class="fas fa-users"></i>
+                      <span>7 Seats</span>
+                    </div>
+                    <div class="vehicle-feature">
+                      <i class="fas fa-tachometer-alt"></i>
+                      <span>22 mpg</span>
+                    </div>
+                    <div class="vehicle-feature">
+                      <i class="fas fa-gas-pump"></i>
+                      <span>Gasoline</span>
+                    </div>
+                    <div class="vehicle-feature">
+                      <i class="fas fa-car"></i>
+                      <span>Automatic</span>
+                    </div>
+                  </div>
+                  <div class="vehicle-price">
+                    <p>$180<span>/day</span></p>
+                  </div>
+                </div>
+                <div class="vehicle-footer">
+                  <button class="btn btn-primary btn-full rent-btn" data-id="2">Rent Now</button>
+                </div>
+              </div>
+
+              <!-- Car 3 -->
+              <div class="vehicle-card" data-id="3">
+                <div class="vehicle-image">
+                  <img src="mercedes c-class.jpg" alt="Mercedes C-Class">
+                </div>
+                <div class="vehicle-header">
+                  <h3 class="vehicle-title">Mercedes C-Class</h3>
+                  <p class="vehicle-type">Luxury Sedan</p>
+                </div>
+                <div class="vehicle-content">
+                  <div class="vehicle-features">
+                    <div class="vehicle-feature">
+                      <i class="fas fa-users"></i>
+                      <span>5 Seats</span>
+                    </div>
+                    <div class="vehicle-feature">
+                      <i class="fas fa-tachometer-alt"></i>
+                      <span>28 mpg</span>
+                    </div>
+                    <div class="vehicle-feature">
+                      <i class="fas fa-gas-pump"></i>
+                      <span>Gasoline</span>
+                    </div>
+                    <div class="vehicle-feature">
+                      <i class="fas fa-car"></i>
+                      <span>Automatic</span>
+                    </div>
+                  </div>
+                  <div class="vehicle-price">
+                    <p>$160<span>/day</span></p>
+                  </div>
+                </div>
+                <div class="vehicle-footer">
+                  <button class="btn btn-primary btn-full rent-btn" data-id="3">Rent Now</button>
+                </div>
+              </div>
+
+              <!-- Car 4 -->
+              <div class="vehicle-card" data-id="4">
+                <div class="vehicle-image">
+                  <img src="camry.jpg" alt="Toyota Camry">
+                </div>
+                <div class="vehicle-header">
+                  <h3 class="vehicle-title">Toyota Camry</h3>
+                  <p class="vehicle-type">Sedan</p>
+                </div>
+                <div class="vehicle-content">
+                  <div class="vehicle-features">
+                    <div class="vehicle-feature">
+                      <i class="fas fa-users"></i>
+                      <span>5 Seats</span>
+                    </div>
+                    <div class="vehicle-feature">
+                      <i class="fas fa-tachometer-alt"></i>
+                      <span>32 mpg</span>
+                    </div>
+                    <div class="vehicle-feature">
+                      <i class="fas fa-gas-pump"></i>
+                      <span>Gasoline</span>
+                    </div>
+                    <div class="vehicle-feature">
+                      <i class="fas fa-car"></i>
+                      <span>Automatic</span>
+                    </div>
+                  </div>
+                  <div class="vehicle-price">
+                    <p>$90<span>/day</span></p>
+                  </div>
+                </div>
+                <div class="vehicle-footer">
+                  <button class="btn btn-primary btn-full rent-btn" data-id="4">Rent Now</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="vehicles-content" id="vehicles-motorcycles">
+            <div class="vehicles-grid">
+              <!-- Motorcycle 1 -->
+              <div class="vehicle-card" data-id="5">
+                <div class="vehicle-image">
+                  <img src="harley.jpg" alt="Harley-Davidson Iron 883">
+                </div>
+                <div class="vehicle-header">
+                  <h3 class="vehicle-title">Harley-Davidson Iron 883</h3>
+                  <p class="vehicle-type">Cruiser</p>
+                </div>
+                <div class="vehicle-content">
+                  <div class="vehicle-features">
+                    <div class="vehicle-feature">
+                      <i class="fas fa-users"></i>
+                      <span>2 Seats</span>
+                    </div>
+                    <div class="vehicle-feature">
+                      <i class="fas fa-tachometer-alt"></i>
+                      <span>51 mpg</span>
+                    </div>
+                    <div class="vehicle-feature">
+                      <i class="fas fa-gas-pump"></i>
+                      <span>Gasoline</span>
+                    </div>
+                    <div class="vehicle-feature">
+                      <i class="fas fa-car"></i>
+                      <span>Manual</span>
+                    </div>
+                  </div>
+                  <div class="vehicle-price">
+                    <p>$120<span>/day</span></p>
+                  </div>
+                </div>
+                <div class="vehicle-footer">
+                  <button class="btn btn-primary btn-full rent-btn" data-id="5">Rent Now</button>
+                </div>
+              </div>
+
+              <!-- Motorcycle 2 -->
+              <div class="vehicle-card" data-id="6">
+                <div class="vehicle-image">
+                  <img src="ducati.jpg" alt="Ducati Panigale V4">
+                </div>
+                <div class="vehicle-header">
+                  <h3 class="vehicle-title">Ducati Panigale V4</h3>
+                  <p class="vehicle-type">Sport</p>
+                </div>
+                <div class="vehicle-content">
+                  <div class="vehicle-features">
+                    <div class="vehicle-feature">
+                      <i class="fas fa-users"></i>
+                      <span>1 Seat</span>
+                    </div>
+                    <div class="vehicle-feature">
+                      <i class="fas fa-tachometer-alt"></i>
+                      <span>35 mpg</span>
+                    </div>
+                    <div class="vehicle-feature">
+                      <i class="fas fa-gas-pump"></i>
+                      <span>Gasoline</span>
+                    </div>
+                    <div class="vehicle-feature">
+                      <i class="fas fa-car"></i>
+                      <span>Manual</span>
+                    </div>
+                  </div>
+                  <div class="vehicle-price">
+                    <p>$200<span>/day</span></p>
+                  </div>
+                </div>
+                <div class="vehicle-footer">
+                  <button class="btn btn-primary btn-full rent-btn" data-id="6">Rent Now</button>
+                </div>
+              </div>
+
+              <!-- Motorcycle 3 -->
+              <div class="vehicle-card" data-id="7">
+                <div class="vehicle-image">
+                  <img src="ninja.jpg" alt="Kawasaki Ninja 650">
+                </div>
+                <div class="vehicle-header">
+                  <h3 class="vehicle-title">Kawasaki Ninja 650</h3>
+                  <p class="vehicle-type">Sport</p>
+                </div>
+                <div class="vehicle-content">
+                  <div class="vehicle-features">
+                    <div class="vehicle-feature">
+                      <i class="fas fa-users"></i>
+                      <span>2 Seats</span>
+                    </div>
+                    <div class="vehicle-feature">
+                      <i class="fas fa-tachometer-alt"></i>
+                      <span>50 mpg</span>
+                    </div>
+                    <div class="vehicle-feature">
+                      <i class="fas fa-gas-pump"></i>
+                      <span>Gasoline</span>
+                    </div>
+                    <div class="vehicle-feature">
+                      <i class="fas fa-car"></i>
+                      <span>Manual</span>
+                    </div>
+                  </div>
+                  <div class="vehicle-price">
+                    <p>$110<span>/day</span></p>
+                  </div>
+                </div>
+                <div class="vehicle-footer">
+                  <button class="btn btn-primary btn-full rent-btn" data-id="7">Rent Now</button>
+                </div>
+              </div>
+
+              <!-- Motorcycle 4 -->
+              <div class="vehicle-card" data-id="8">
+                <div class="vehicle-image">
+                  <img src="honda cb5.jpg" alt="Honda CB500F">
+                </div>
+                <div class="vehicle-header">
+                  <h3 class="vehicle-title">Honda CB500F</h3>
+                  <p class="vehicle-type">Standard</p>
+                </div>
+                <div class="vehicle-content">
+                  <div class="vehicle-features">
+                    <div class="vehicle-feature">
+                      <i class="fas fa-users"></i>
+                      <span>2 Seats</span>
+                    </div>
+                    <div class="vehicle-feature">
+                      <i class="fas fa-tachometer-alt"></i>
+                      <span>65 mpg</span>
+                    </div>
+                    <div class="vehicle-feature">
+                      <i class="fas fa-gas-pump"></i>
+                      <span>Gasoline</span>
+                    </div>
+                    <div class="vehicle-feature">
+                      <i class="fas fa-car"></i>
+                      <span>Manual</span>
+                    </div>
+                  </div>
+                  <div class="vehicle-price">
+                    <p>$85<span>/day</span></p>
+                  </div>
+                </div>
+                <div class="vehicle-footer">
+                  <button class="btn btn-primary btn-full rent-btn" data-id="8">Rent Now</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Rental Modal -->
+      <div class="modal" id="rental-modal">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title">Rent <span id="vehicle-name"></span></h3>
+            <button class="modal-close">&times;</button>
+          </div>
+          <div class="modal-body">
+            <form id="rental-form">
+              <div class="form-group">
+                <label for="pickup-date">Pickup Date</label>
+                <input id="pickup-date" type="date" required>
+              </div>
+              <div class="form-group">
+                <label for="return-date">Return Date</label>
+                <input id="return-date" type="date" required>
+              </div>
+              <div class="form-group">
+                <label for="renter-name">Full Name</label>
+                <input id="renter-name" type="text" required>
+              </div>
+              <div class="form-group">
+                <label for="renter-phone">Phone</label>
+                <input id="renter-phone" type="tel" required>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-primary" id="confirm-rental">Confirm Booking</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Rented Vehicles Section -->
+    <section id="rented" class="rented-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Your Rented Vehicles</h2>
+          <p class="section-description">
+            Manage your current and upcoming vehicle rentals.
+          </p>
+        </div>
+
+        <div class="rented-vehicles">
+          <!-- Rented Vehicle 1 -->
+          <div class="rented-card" data-id="1">
+            <div class="rented-image">
+              <span class="status-badge active">Active</span>
+              <img src="audi a4.jpg" alt="Audi A4">
+            </div>
+            <div class="rented-header">
+              <h3 class="rented-title">Audi A4</h3>
+              <p class="rented-type">Sedan</p>
+            </div>
+            <div class="rented-content">
+              <div class="rental-dates">
+                <i class="fas fa-calendar"></i>
+                <span>Apr 1, 2025</span>
+                <i class="fas fa-arrow-right"></i>
+                <span>Apr 5, 2025</span>
+              </div>
+              <div class="rental-status">
+                <i class="fas fa-check-circle"></i>
+                <span>Currently in use</span>
+              </div>
+            </div>
+            <div class="rented-footer">
+              <button class="btn btn-outline extend-btn" data-id="1">Extend</button>
+              <button class="btn btn-danger cancel-btn" data-id="1">Cancel</button>
+            </div>
+          </div>
+
+          <!-- Rented Vehicle 2 -->
+          <div class="rented-card" data-id="2">
+            <div class="rented-image">
+              <span class="status-badge upcoming">Upcoming</span>
+              <img src="HONDA.jpg" alt="Honda CBR650R">
+            </div>
+            <div class="rented-header">
+              <h3 class="rented-title">Honda CBR650R</h3>
+              <p class="rented-type">Sport Motorcycle</p>
+            </div>
+            <div class="rented-content">
+              <div class="rental-dates">
+                <i class="fas fa-calendar"></i>
+                <span>Apr 10, 2025</span>
+                <i class="fas fa-arrow-right"></i>
+                <span>Apr 12, 2025</span>
+              </div>
+            </div>
+            <div class="rented-footer">
+              <button class="btn btn-outline extend-btn" data-id="2">Extend</button>
+              <button class="btn btn-danger cancel-btn" data-id="2">Cancel</button>
+            </div>
+          </div>
+
+          <!-- Rented Vehicle 3 -->
+          <div class="rented-card" data-id="3">
+            <div class="rented-image">
+              <span class="status-badge completed">Completed</span>
+              <img src="range rover.jpg" alt="Range Rover Sport">
+            </div>
+            <div class="rented-header">
+              <h3 class="rented-title">Range Rover Sport</h3>
+              <p class="rented-type">SUV</p>
+            </div>
+            <div class="rented-content">
+              <div class="rental-dates">
+                <i class="fas fa-calendar"></i>
+                <span>Mar 15, 2025</span>
+                <i class="fas fa-arrow-right"></i>
+                <span>Mar 20, 2025</span>
+              </div>
+            </div>
+            <div class="rented-footer">
+              <button class="btn btn-primary btn-full rent-again-btn" data-id="3">Rent Again</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">What Our Customers Say</h2>
+          <p class="section-description">
+            Don't just take our word for it. Here's what our customers have to say about their experience with RideRent.
+          </p>
+        </div>
+
+        <div class="testimonials-grid">
+          <!-- Testimonial 1 -->
+          <div class="testimonial-card">
+            <div class="testimonial-header">
+              <div class="testimonial-avatar">
+                <img src="client 1.jpg" alt="Sarah Johnson">
+              </div>
+              <div class="testimonial-author">
+                <h3>Sarah Johnson</h3>
+                <p>Business Executive</p>
+              </div>
+            </div>
+            <div class="testimonial-content">
+              <div class="testimonial-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p>RideRent provided an exceptional experience for my business trip. The Tesla Model S was immaculate and the service was top-notch. I'll definitely be using their services again.</p>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="testimonial-card">
+            <div class="testimonial-header">
+              <div class="testimonial-avatar">
+                <img src="client 2.jpg" alt="Michael Chen">
+              </div>
+              <div class="testimonial-author">
+                <h3>Michael Chen</h3>
+                <p>Travel Enthusiast</p>
+              </div>
+            </div>
+            <div class="testimonial-content">
+              <div class="testimonial-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p>I rented a motorcycle for a weekend trip along the coast, and it was the highlight of my vacation. The bike was in perfect condition, and the rental process was seamless.</p>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="testimonial-card">
+            <div class="testimonial-header">
+              <div class="testimonial-avatar">
+                <img src="client 3.jpg" alt="Emily Rodriguez">
+              </div>
+              <div class="testimonial-author">
+                <h3>Emily Rodriguez</h3>
+                <p>Wedding Planner</p>
+              </div>
+            </div>
+            <div class="testimonial-content">
+              <div class="testimonial-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
+              <p>We rented a luxury car for our client's wedding, and RideRent delivered beyond our expectations. The car was beautifully maintained and made for stunning photos.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="reviews-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Customer Reviews</h2>
+          <p class="section-description">
+            Read what our customers have to say about their rental experiences or leave your own review.
+          </p>
+        </div>
+
+        <div class="review-form-card">
+          <div class="review-form-header">
+            <h3>Write a Review</h3>
+          </div>
+          <div class="review-form-content">
+            <div class="review-rating-select">
+              <i class="fas fa-star rating-star" data-rating="1"></i>
+              <i class="fas fa-star rating-star" data-rating="2"></i>
+              <i class="fas fa-star rating-star" data-rating="3"></i>
+              <i class="fas fa-star rating-star" data-rating="4"></i>
+              <i class="fas fa-star rating-star" data-rating="5"></i>
+            </div>
+            <textarea id="review-text" placeholder="Share your experience with us..."></textarea>
+            <button id="submit-review" class="btn btn-primary">Submit Review</button>
+          </div>
+        </div>
+
+        <div class="reviews-list">
+          <!-- Review 1 -->
+          <div class="review-card">
+            <div class="review-content">
+              <div class="review-header">
+                <div>
+                  <h3>David Wilson</h3>
+                  <p>March 15, 2025</p>
+                </div>
+                <div class="review-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+              <p>I rented a BMW X5 for a family trip and it was perfect. The car was clean, well-maintained, and the pickup/drop-off process was very efficient.</p>
+            </div>
+          </div>
+
+          <!-- Review 2 -->
+          <div class="review-card">
+            <div class="review-content">
+              <div class="review-header">
+                <div>
+                  <h3>Jessica Lee</h3>
+                  <p>March 10, 2025</p>
+                </div>
+                <div class="review-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                </div>
+              </div>
+              <p>Great experience with the Ducati motorcycle rental. The bike was in excellent condition and the staff was very helpful in explaining all the features.</p>
+            </div>
+          </div>
+
+          <!-- Review 3 -->
+          <div class="review-card">
+            <div class="review-content">
+              <div class="review-header">
+                <div>
+                  <h3>Robert Brown</h3>
+                  <p>March 5, 2025</p>
+                </div>
+                <div class="review-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+              <p>The Tesla Model S was amazing! It was my first time driving an electric vehicle and the team at RideRent made sure I understood all the features before driving off.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Contact Us</h2>
+          <p class="section-description">
+            Have questions or need assistance? Reach out to our team and we'll get back to you as soon as possible.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-form-card">
+            <div class="contact-form-header">
+              <h3>Send Us a Message</h3>
+              <p>Fill out the form below and we'll respond within 24 hours.</p>
+            </div>
+            <div class="contact-form-content">
+              <form id="contact-form">
+                <div class="form-group">
+                  <label for="contact-name">Full Name</label>
+                  <input id="contact-name" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                  <label for="contact-email">Email</label>
+                  <input id="contact-email" name="email" type="email" placeholder="example@gmail.com" required>
+                </div>
+                <div class="form-group">
+                  <label for="contact-phone">Phone Number</label>
+                  <input id="contact-phone" name="phone" type="tel" placeholder="+1 (555) 123-4567">
+                </div>
+                <div class="form-group">
+                  <label for="contact-message">Message</label>
+                  <textarea id="contact-message" name="message" placeholder="How can we help you?" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full">
+                  <i class="fas fa-paper-plane"></i> Send Message
+                </button>
+              </form>
+            </div>
+          </div>
+
+          <div class="contact-info">
+            <div class="contact-info-card">
+              <div class="contact-info-content">
+                <h3>Contact Information</h3>
+                <div class="contact-info-item">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <div>
+                    <p class="contact-info-title">Our Location</p>
+                    <p>123 Rental Street, City Center, 10001</p>
+                  </div>
+                </div>
+                <div class="contact-info-item">
+                  <i class="fas fa-phone"></i>
+                  <div>
+                    <p class="contact-info-title">Phone Number</p>
+                    <p>+1 (555) 123-4567</p>
+                  </div>
+                </div>
+                <div class="contact-info-item">
+                  <i class="fas fa-envelope"></i>
+                  <div>
+                    <p class="contact-info-title">Email Address</p>
+                    <p>info@riderent.com</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-info-card">
+              <div class="contact-info-content">
+                <h3>Business Hours</h3>
+                <div class="business-hours">
+                  <div class="business-hours-item">
+                    <span>Monday - Friday</span>
+                    <span>9:00 AM - 6:00 PM</span>
+                  </div>
+                  <div class="business-hours-item">
+                    <span>Saturday</span>
+                    <span>10:00 AM - 4:00 PM</span>
+                  </div>
+                  <div class="business-hours-item">
+                    <span>Sunday</span>
+                    <span>Closed</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-info-card">
+              <div class="contact-info-content">
+                <h3>Emergency Support</h3>
+                <p>For urgent assistance with your rental vehicle, please call our 24/7 support line:</p>
+                <div class="emergency-contact">
+                  <i class="fas fa-phone"></i>
+                  <span>+1 (555) 999-8888</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <div class="footer-logo">
+            <i class="fas fa-car"></i>
+            <span>RideRent</span>
+          </div>
+          <p>Premium car and motorcycle rental services. Experience the thrill of driving your dream vehicle today.</p>
+          <div class="footer-social">
+            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#vehicles">Vehicles</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-links">
+          <h3>Vehicle Types</h3>
+          <ul>
+            <li><a href="#">Luxury Cars</a></li>
+            <li><a href="#">Sports Cars</a></li>
+            <li><a href="#">SUVs</a></li>
+            <li><a href="#">Motorcycles</a></li>
+            <li><a href="#">Electric Vehicles</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-contact">
+          <h3>Contact Us</h3>
+          <ul>
+            <li>
+              <i class="fas fa-map-marker-alt"></i>
+              <span>123 Rental Street, City Center, 10001</span>
+            </li>
+            <li>
+              <i class="fas fa-phone"></i>
+              <span>+1 (555) 123-4567</span>
+            </li>
+            <li>
+              <i class="fas fa-envelope"></i>
+              <span>info@riderent.com</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year"></span> RideRent. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast">
+    <div class="toast-content">
+      <div class="toast-title">Success</div>
+      <div class="toast-message">Operation completed successfully!</div>
+    </div>
+    <button class="toast-close">&times;</button>
+  </div>
+
+  <script src="./main.js"></script>
+</body>
+</html>
